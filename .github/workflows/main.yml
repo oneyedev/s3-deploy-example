@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm run build
-    - uses: oneyedev/s3-deploy@v1.1
+    - uses: oneyedev/s3-deploy@v1.3
       with:
         public-root: "./dist"
         region: "ap-northeast-2"
