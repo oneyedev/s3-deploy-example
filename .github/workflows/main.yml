@@ -4,13 +4,13 @@ jobs:
   pipeline:
     runs-on: ubuntu-latest
     env:
-        AWS_ACCESS_API_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_ACCESS_API_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
     - uses: actions/checkout@v2
     - run: npm run build
-    - uses: oneyedev/s3-deploy@v1.3
+    - uses: reggionick/s3-deploy@v1
       with:
-        public-root: "./dist"
+        folder: "./dist"
         region: "ap-northeast-2"
         bucket: "s3-deploy-test.oneyedev.com"
