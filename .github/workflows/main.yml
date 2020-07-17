@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm run build
-    - uses: jakejarvis/s3-sync-action@v1.3
+    - uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
       env:
