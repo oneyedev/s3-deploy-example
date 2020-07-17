@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm run build
-    - uses: reggionick/s3-deploy@v1
+    - uses: oneyedev/s3-deploy@v1
       with:
         folder: "./dist"
         region: "ap-northeast-2"
