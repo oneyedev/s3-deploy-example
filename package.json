@@ -1,0 +1,11 @@
+{
+  "name": "s3-deploy-example",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && cp sample.html dist/sample.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
